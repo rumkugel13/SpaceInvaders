@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <OutputType>WinExe</OutputType>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>SpaceInvaders.WindowsDX</AssemblyTitle>
+    <Product>SpaceInvaders.WindowsDX</Product>
+    <Copyright>Copyright © rumkugel13 2020</Copyright>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_alien.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1641" />
+    <PackageReference Include="SharpDX" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Direct2D1" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Direct3D11" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Direct3D9" Version="4.0.1" />
+    <PackageReference Include="SharpDX.DXGI" Version="4.0.1" />
+    <PackageReference Include="SharpDX.Mathematics" Version="4.0.1" />
+    <PackageReference Include="SharpDX.MediaFoundation" Version="4.0.1" />
+    <PackageReference Include="SharpDX.XAudio2" Version="4.0.1" />
+    <PackageReference Include="SharpDX.XInput" Version="4.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <Content Include="icon_alien.ico" />
+  </ItemGroup>
+  <Import Project="..\SpaceInvaders.Shared\SpaceInvaders.Shared.projitems" Label="Shared" />
+</Project>

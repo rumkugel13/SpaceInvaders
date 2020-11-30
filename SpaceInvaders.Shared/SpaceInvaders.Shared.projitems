@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6efba8a9-a407-4029-bdd0-651d22a87386</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SpaceInvaders.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AlienWave.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BaseScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\BaseComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\MotionComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\RectangleComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\ReservesComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\ScoreComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\TextureComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EntityCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Alien.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Brick.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\CollidableEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Ground.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\GroundCannon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Mothership.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GameObjects\Projectile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SceneSwitcher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Scenes\MainGameScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Scenes\MainMenuScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextField.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Fonts\Arial16.spritefont" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Fonts\Arial24.spritefont" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Alien_24.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Alien_24_AA.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Alien_28.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Alien_28_AA.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Alien_32.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Alien_32_AA.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Cannon_64.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Cannon_64_AA.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\DefensiveBunker_24.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Mothership_64.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Mothership_64_AA.png" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Textures\Projectile_16.png" />
+  </ItemGroup>
+</Project>
