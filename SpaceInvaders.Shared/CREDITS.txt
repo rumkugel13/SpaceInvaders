@@ -1,0 +1,5 @@
+Libraries:
+Monogame
+- http://www.monogame.net/
+- Copyright © 2009-2020 The MonoGame Team
+- License: Microsoft Public License (Ms-PL)
