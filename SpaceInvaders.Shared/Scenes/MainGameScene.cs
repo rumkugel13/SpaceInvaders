@@ -24,8 +24,9 @@ namespace SpaceInvaders.Shared.Scenes
             this.collection = new EntityCollection();
             this.alienWave = new AlienWave(this.collection);
 
-            Brick.DrawTexture = new Texture2D(this.Game.GraphicsDevice, 1, 1);
-            Brick.DrawTexture.SetData(new[] { Color.White });
+            //Brick.DrawTexture = new Texture2D(this.Game.GraphicsDevice, 1, 1);
+            //Brick.DrawTexture.SetData(new[] { Color.White });
+            Brick.DrawTexture = this.Content.Load<Texture2D>("Textures/Pixel");
             Projectile.Texture = this.Content.Load<Texture2D>("Textures/Projectile_16");
 
             this.CreateGui();
