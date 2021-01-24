@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceInvaders.Shared.Components;
 using System;
@@ -8,6 +7,10 @@ namespace SpaceInvaders.Shared.GameObjects
 {
     public class Alien : CollidableEntity
     {
+        public static Texture2D TextureSmall;
+        public static Texture2D TextureMedium;
+        public static Texture2D TextureLarge;
+
         private Size size;
         private float projectileSpawnTime;
         private float maxProjectileTimespan = 20;
@@ -27,14 +30,9 @@ namespace SpaceInvaders.Shared.GameObjects
             new MotionComponent(velocity).AddTo(this);
             new RectangleComponent((this.Position - Vector2.One * (size == Size.Small ? 12 : size == Size.Medium ? 14 : 16)).ToPoint(),
                         new Point((size == Size.Small ? 24 : size == Size.Medium ? 28 : 32))).AddTo(this);
+            new TextureComponent(size == Size.Small ? TextureSmall : size == Size.Medium ? TextureMedium : TextureLarge).AddTo(this);
 
             this.ResetSpawnTime();
-        }
-
-        public override void LoadContent(ContentManager content)
-        {
-            base.LoadContent(content);
-            new TextureComponent(content.Load<Texture2D>("Textures/" + (size == Size.Small ? "Alien_24_AA" : size == Size.Medium ? "Alien_28_AA" : "Alien_32_AA"))).AddTo(this);
         }
 
         public override void OnCollision(CollidableEntity other)
