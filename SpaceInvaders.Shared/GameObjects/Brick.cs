@@ -31,8 +31,8 @@ namespace SpaceInvaders.Shared.GameObjects
 
         public static void CreateBunkers(EntityCollection collection, Texture2D template)
         {
-            Color[] rawData = new Color[template.Width * template.Height];
-            template.GetData<Color>(rawData);
+            //Color[] rawData = new Color[template.Width * template.Height];
+            //template.GetData<Color>(rawData);
 
             // Note that this stores the pixel's row in the first index, and the pixel's column in the second,
             // with this setup.
@@ -42,7 +42,7 @@ namespace SpaceInvaders.Shared.GameObjects
                 for (int column = 0; column < template.Width; column++)
                 {
                     // Assumes row major ordering of the array.
-                    rawDataAsGrid[row, column] = rawData[row * template.Width + column];
+                    rawDataAsGrid[row, column] = bunker[row][column] == '.' ? Color.Black : Color.White;// rawData[row * template.Width + column];
                 }
             }
 
@@ -70,5 +70,21 @@ namespace SpaceInvaders.Shared.GameObjects
                 xcurrent += xincrement;
             }
         }
+
+        private static string[] bunker =
+        {
+            ".......##########.......",
+            "....################....",
+            "..####################..",
+            ".######################.",
+            ".######################.",
+            "########################",
+            "########################",
+            "##########....##########",
+            "#########......#########",
+            "########........########",
+            "########........########",
+            "########........########",
+        };
     }
 }
