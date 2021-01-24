@@ -68,13 +68,19 @@ namespace Microsoft.Xna.Framework
 
         protected virtual void OnVisibleChanged(object sender, EventArgs args)
         {
-            VisibleChanged.Invoke(this, args);
+            if (VisibleChanged == null)
+                return;
+            VisibleChanged(sender, args);
+            //VisibleChanged.Invoke(this, args);
             //EventHelpers.Raise(this, VisibleChanged, args);
         }
 
         protected virtual void OnDrawOrderChanged(object sender, EventArgs args)
         {
-            DrawOrderChanged.Invoke(this, args);
+            if (DrawOrderChanged == null)
+                return;
+            DrawOrderChanged(sender, args);
+            //DrawOrderChanged.Invoke(this, args);
             //EventHelpers.Raise(this, DrawOrderChanged, args);
         }
     }
