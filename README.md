@@ -4,7 +4,7 @@
 
 ## About
 
-A small Space Invaders clone made in [MonoGame](https://www.monogame.net/)
+A small [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders) clone made in [MonoGame](https://www.monogame.net/)
 
 # Build Instructions
 
