@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <OutputType>WinExe</OutputType>
     <MonoGamePlatform>Windows</MonoGamePlatform>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <AssemblyTitle>SpaceInvaders.WindowsDX</AssemblyTitle>
     <Product>SpaceInvaders.WindowsDX</Product>
     <Copyright>Copyright © rumkugel13 2020</Copyright>
@@ -23,8 +23,8 @@
     <DefineConstants>TRACE;WINDOWS</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
-    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="SharpDX" Version="4.0.1" />
     <PackageReference Include="SharpDX.Direct2D1" Version="4.0.1" />
     <PackageReference Include="SharpDX.Direct3D11" Version="4.0.1" />
@@ -40,4 +40,8 @@
     <Content Include="icon_alien.ico" />
   </ItemGroup>
   <Import Project="..\SpaceInvaders.Shared\SpaceInvaders.Shared.projitems" Label="Shared" />
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+	  <Message Text="Restoring dotnet tools" Importance="High" />
+	  <Exec Command="dotnet tool restore" />
+  </Target>
 </Project>
